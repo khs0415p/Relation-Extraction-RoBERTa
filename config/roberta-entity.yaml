@@ -1,0 +1,37 @@
+path:
+    train_path: 
+    dev_path: 
+    predict_path: 
+
+exp:
+    exp_name : Wandb Exp Name 
+    project_name : Wandb project Name 
+
+data:
+    aug_option : None
+    
+model:
+    model_name: Pretrain Model Name
+    type : entity
+
+train:
+    loss_name : 'focal'
+    gpus: 1
+    batch_size: 32
+    max_epoch: 5
+    learning_rate: 5e-5
+    logging_step: 1
+    save_total_limit : 3 # number of total save model.
+    save_steps : 500 # model saving step.
+    warmup_steps : 3000 # number of warmup steps for learning rate scheduler
+    weight_decay : 0.01 # strength of weight decay
+    logging_steps : 100  # log saving step.
+    eval_steps : 500 # evaluation step
+    scheduler : 'linear' # linear OR cosine OR steplr
+    metric_for_best_model : 'micro f1 score'
+    patience : 10
+
+test:
+    model_dir : Model load path
+    prediction : prediction save path
+
