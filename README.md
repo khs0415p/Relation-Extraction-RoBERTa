@@ -1,4 +1,4 @@
-# Realation Extraction
+# Relation Extraction
 
 문장 속 단어간의 관계성을 파악하는 Task를 말한다.  
 이 Task의 목적은 관계성을 파악해 문장의 전체적인 의미나 의도를 해석하는데 도움을 줄 수 있다.  
